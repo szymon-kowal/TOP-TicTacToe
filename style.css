@@ -1,0 +1,91 @@
+:root {
+    --backgroundcolor: rgb(224, 192, 85);
+    --clicksize: 100px;
+    --paddingcont: 10px;
+    --gapcont: 5px;
+    --bordercolor: rgb(187, 185, 181);
+    --borderradius:8px;
+    --padding:10px;
+    --backgroundwallcolor: white;
+}
+
+* {
+    /* outline: 1px solid red; */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    min-width: calc(var(--clicksize) * 3 + var(--paddingcont) * 4 + 2 * var(--gapcont));
+    border-radius: 8px;
+    border: solid var(--bordercolor) 1px;
+    background-color: var(--backgroundwallcolor);
+}
+
+.header {
+    padding: var(--padding);
+}
+
+.board {
+    background-color: var(--backgroundcolor);
+    display: grid;
+    grid-template-columns: repeat(3, var(--clicksize));
+    grid-template-rows: repeat(3, var(--clicksize));
+    justify-content: center;
+    padding: var(--paddingcont);
+    gap: 0;
+}
+
+.field {
+    background-color: var(--backgroundcolor);
+    border: solid black calc(var(--gapcont) / 2);
+}
+select {
+    background-color: rgb(233, 233, 233);
+    width: 5rem;
+    border: 0;
+    border-bottom: 2px solid black;
+    font-size: 1rem;
+}
+.player-selection {
+    width: 100%;
+    margin-top: var(--padding);
+    display: flex;
+    gap: 1em;
+    justify-content: space-around;
+}
+
+.btn {
+    width: 15em;
+    height: 1.8rem;
+    background-color: var(--backgroundwallcolor);
+    border-radius: var(--borderradius);
+    border-width: 1.5px;
+    border-color: grey;
+}
+
+.restart {
+    border: 0;
+    border-bottom-left-radius: calc(var(--borderradius)  - 1px);
+    border-bottom-right-radius: calc(var(--borderradius)  - 1px);
+    border-top: 1px solid var(--bordercolor);
+    padding: var(--padding) 0;
+    background-color: var(--backgroundwallcolor);
+}
+
+/* .t {
+    border-top: 0;
+}
+
+.r {
+    border-right: 0;
+}
+
+.b {
+    border-bottom: 0;
+}
+
+.l {
+    border-left: 0;
+} */
