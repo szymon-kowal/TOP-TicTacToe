@@ -9,8 +9,22 @@
     --backgroundwallcolor: white;
 }
 
+button {
+    padding: 0;
+    border: none;
+    outline: none;
+    font: inherit;
+    color: inherit;
+    background: none
+  }
+
+button:hover {
+    cursor: pointer;
+}
+
 * {
     /* outline: 1px solid red; */
+    font-size: 1rem;
 }
 
 .container {
@@ -21,10 +35,14 @@
     border-radius: 8px;
     border: solid var(--bordercolor) 1px;
     background-color: var(--backgroundwallcolor);
+    margin: auto;
 }
 
 .header {
-    padding: var(--padding);
+    padding: calc(var(--padding) * 2) var(--padding);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .board {
@@ -33,24 +51,22 @@
     grid-template-columns: repeat(3, var(--clicksize));
     grid-template-rows: repeat(3, var(--clicksize));
     justify-content: center;
-    padding: var(--paddingcont);
+    padding: 30px;
     gap: 0;
 }
 
 .field {
     background-color: var(--backgroundcolor);
     border: solid black calc(var(--gapcont) / 2);
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-select {
-    background-color: rgb(233, 233, 233);
-    width: 5rem;
-    border: 0;
-    border-bottom: 2px solid black;
-    font-size: 1rem;
-}
+
 .player-selection {
     width: 100%;
-    margin-top: var(--padding);
+    margin-top: calc(var(--padding) * 1.5) ;
     display: flex;
     gap: 1em;
     justify-content: space-around;
@@ -60,8 +76,9 @@ select {
     width: 15em;
     height: 1.8rem;
     background-color: var(--backgroundwallcolor);
+    border: solid;
     border-radius: var(--borderradius);
-    border-width: 1.5px;
+    border-width: 1px;
     border-color: grey;
 }
 
@@ -70,8 +87,10 @@ select {
     border-bottom-left-radius: calc(var(--borderradius)  - 1px);
     border-bottom-right-radius: calc(var(--borderradius)  - 1px);
     border-top: 1px solid var(--bordercolor);
-    padding: var(--padding) 0;
+    padding: calc(var(--padding) * 1.5) 0;
     background-color: var(--backgroundwallcolor);
+    font-weight: 600;
+    font-size: 1.3rem;
 }
 
 /* .t {
