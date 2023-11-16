@@ -1,101 +1,124 @@
 :root {
-    --backgroundcolor: rgb(224, 192, 85);
-    --clicksize: 100px;
-    --paddingcont: 10px;
-    --gapcont: 5px;
-    --bordercolor: rgb(187, 185, 181);
-    --borderradius:8px;
-    --padding:10px;
-    --backgroundwallcolor: white;
+	--backgroundcolor: rgb(224, 192, 85);
+	--clicksize: 100px;
+	--paddingcont: 10px;
+	--gapcont: 5px;
+	--bordercolor: rgb(187, 185, 181);
+	--borderradius: 8px;
+	--padding: 10px;
+	--backgroundwallcolor: white;
+}
+
+html,
+body {
+	height: 100%;
+	min-height: 100%;
+}
+
+.flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	min-height: 100%;
 }
 
 button {
-    padding: 0;
-    border: none;
-    outline: none;
-    font: inherit;
-    color: inherit;
-    background: none
-  }
+	padding: 0;
+	border: none;
+	outline: none;
+	font: inherit;
+	color: inherit;
+	background: none;
+}
 
 button:hover {
-    cursor: pointer;
+	cursor: pointer;
 }
 
 * {
-    /* outline: 1px solid red; */
-    font-size: 1rem;
+	/* outline: 1px solid red; */
+	font-size: 1rem;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-    min-width: calc(var(--clicksize) * 3 + var(--paddingcont) * 4 + 2 * var(--gapcont));
-    border-radius: 8px;
-    border: solid var(--bordercolor) 1px;
-    background-color: var(--backgroundwallcolor);
-    margin: auto;
+	display: flex;
+	flex-direction: column;
+	width: 60%;
+	min-width: calc(
+		var(--clicksize) * 3 + var(--paddingcont) * 4 + 2 * var(--gapcont)
+	);
+	border-radius: 8px;
+	border: solid var(--bordercolor) 1px;
+	background-color: var(--backgroundwallcolor);
+	margin: auto;
 }
 
 .header {
-    padding: calc(var(--padding) * 2) var(--padding);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    font-size: 2rem;
+	padding: calc(var(--padding) * 2) var(--padding);
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	font-size: 2rem;
 }
 
 .player {
-    font-size: 2rem;
+	font-size: 2rem;
 }
 
 .board {
-    background-color: var(--backgroundcolor);
-    display: grid;
-    grid-template-columns: repeat(3, var(--clicksize));
-    grid-template-rows: repeat(3, var(--clicksize));
-    justify-content: center;
-    padding: 30px;
-    gap: 0;
+	background-color: var(--backgroundcolor);
+	display: grid;
+	grid-template-columns: repeat(3, var(--clicksize));
+	grid-template-rows: repeat(3, var(--clicksize));
+	justify-content: center;
+	padding: 30px;
+	gap: 0;
 }
 
 .field {
-    background-color: var(--backgroundcolor);
-    border: solid black calc(var(--gapcont) / 2);
-    font-size: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	background-color: var(--backgroundcolor);
+	border: solid black calc(var(--gapcont) / 2);
+	font-size: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .player-selection {
-    width: 100%;
-    margin-top: calc(var(--padding) * 1.5) ;
-    display: flex;
-    gap: 1em;
-    justify-content: space-around;
+	width: 100%;
+	margin-top: calc(var(--padding) * 1.5);
+	display: flex;
+	gap: 1em;
+	justify-content: space-around;
 }
 
 .btn {
-    width: 15em;
-    height: 1.8rem;
-    background-color: var(--backgroundwallcolor);
-    border: solid;
-    border-radius: var(--borderradius);
-    border-width: 1px;
-    border-color: grey;
+	width: 15em;
+	height: 1.8rem;
+	background-color: var(--backgroundwallcolor);
+	border: solid;
+	border-radius: var(--borderradius);
+	border-width: 1px;
+	border-color: grey;
 }
 
 .restart {
-    border: 0;
-    border-bottom-left-radius: calc(var(--borderradius)  - 1px);
-    border-bottom-right-radius: calc(var(--borderradius)  - 1px);
-    border-top: 1px solid var(--bordercolor);
-    padding: calc(var(--padding) * 1.5) 0;
-    background-color: var(--backgroundwallcolor);
-    font-weight: 600;
-    font-size: 1.3rem;
+	border: 0;
+	border-bottom-left-radius: calc(var(--borderradius) - 1px);
+	border-bottom-right-radius: calc(var(--borderradius) - 1px);
+	border-top: 1px solid var(--bordercolor);
+	padding: calc(var(--padding) * 1.5) 0;
+	background-color: var(--backgroundwallcolor);
+	font-weight: 600;
+	font-size: 1.3rem;
+}
+
+.flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100%;
 }
 
 /* .t {
